@@ -55,3 +55,20 @@ vim.api.nvim_set_keymap('n', '<C-c>', '<S-c>', { noremap = true })
 
 -- Lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open lazygit" })
+
+-- Theme toggle (dark/light)
+vim.api.nvim_set_keymap("n", "<leader>tt", ":CyberdreamToggleMode<CR>", { noremap = true, silent = true })
+
+-- Change arrow keys + shift
+vim.api.nvim_set_keymap("n", "<S-Left>", "<Left>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<S-Right>", "<Right>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<S-Up>", "<Up>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<S-Down>", "<Down>", { noremap = true })
+vim.api.nvim_set_keymap("v", "<S-Left>", "<Left>", { noremap = true })
+vim.api.nvim_set_keymap("v", "<S-Right>", "<Right>", { noremap = true })
+vim.api.nvim_set_keymap("v", "<S-Up>", "<Up>", { noremap = true })
+vim.api.nvim_set_keymap("v", "<S-Down>", "<Down>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<S-Left>", "<Left>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<S-Right>", "<Right>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<S-Up>", "<Up>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<S-Down>", "<Down>", { noremap = true })

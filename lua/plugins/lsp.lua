@@ -3,7 +3,7 @@ local on_lsp_attach = function(client, bufnr)
 
     vim.keymap.set("n", "go", function() vim.lsp.buf.type_definition() end, opts)
     vim.keymap.set("n", "gi", function() vim.lsp.buf.hover() end, opts)
-    vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
+    -- vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
     vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
@@ -80,8 +80,8 @@ return {
                         behavior = cmp.ConfirmBehavior.Replace,
                         select = true,
                     },
-                    ['<Tab>'] = cmp_action.luasnip_supertab(),
-                    ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+                    -- ['<Tab>'] = cmp_action.luasnip_supertab(),
+                    -- ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
                 }),
                 preselect = 'item',
                 completion = {
