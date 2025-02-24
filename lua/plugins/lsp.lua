@@ -1,16 +1,3 @@
-local on_lsp_attach = function(client, bufnr)
-    local opts = { buffer = bufnr, remap = false }
-
-    vim.keymap.set("n", "go", function() vim.lsp.buf.type_definition() end, opts)
-    vim.keymap.set("n", "gi", function() vim.lsp.buf.hover() end, opts)
-    -- vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
-    vim.keymap.set("n", "[d", function() vim.lsp.diagnostic.goto_next() end, opts)
-    vim.keymap.set("n", "]d", function() vim.lsp.diagnostic.goto_prev() end, opts)
-    vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
-    vim.keymap.set("n", "<leader>cr", function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format { async = true } end,
-        { desc = "Format code", buffer = bufnr })
-end
 
 return {
     -- TODO: do we need it, whats the impact of it?
@@ -107,7 +94,6 @@ return {
             lsp_zero.extend_lspconfig()
 
             lsp_zero.on_attach(function(client, bufnr)
-                on_lsp_attach(client, bufnr)
             end)
             lsp_zero.set_server_config({
                 capabilities = {
