@@ -6,10 +6,12 @@ return {
         require("cyberdream").setup({
             transparent = false,
             hide_fillchars = false,
-            borderless_telescope = true,
+            borderless_picker = true,
             terminal_colors = true,
-            theme = {
-                variant = "dark"
+            options = {
+                theme = {
+                    variant = "dark"
+                }
             }
         })
         vim.cmd.colorscheme "cyberdream"
